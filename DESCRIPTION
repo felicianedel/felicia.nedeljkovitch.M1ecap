@@ -1,8 +1,8 @@
 Package: felicia.nedeljkovitch.M1ecap
-Title: What the Package Does (One Line, Title Case)
+Title: Package réalisé en examen de R
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person("Félicia", "Nedeljkovitch", , "felicia.nedel@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
