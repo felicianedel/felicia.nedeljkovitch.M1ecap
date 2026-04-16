@@ -1,0 +1,49 @@
+---
+title: "Présentation du package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Présentation du package}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(felicia.nedeljkovitch.M1ecap)
+```
+
+## Objectif
+
+Cette vignette présente le jeu de données `netflix` et quelques fonctions du package.
+
+## Jeu de données
+
+Le package contient un jeu de données nommé `netflix`.
+
+```{r}
+head(netflix)
+```
+
+## Filtrer les données
+
+On peut filtrer les données selon le genre.
+
+```{r}
+filtre_genre(netflix, "Female")
+```
+
+## Calcul groupé
+
+On peut calculer le temps moyen de visionnage par type d'abonnement.
+
+```{r}
+temps_moyen_abonnement(netflix)
+```
+
+## Graphique
+
+On peut représenter ce calcul avec un graphique.
+
+```{r}
+temps_moyen_abonnement_graph(netflix)
+```
