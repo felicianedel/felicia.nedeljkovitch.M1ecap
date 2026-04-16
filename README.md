@@ -67,4 +67,4 @@ git merge branch1 git commit -m “commit D”
 
 ## Branch1
 
-Petite modification sur la nouvelle branche créée branch1
+Petite modification sur la nouvelle branche créée branch1 Modification
