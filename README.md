@@ -50,3 +50,21 @@ You can also embed plots, for example:
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.
+
+## Informations
+
+Le premier commit de ce répertoire a été effectué le 16/04/2026 à 09h28
+
+## Réponse question
+
+git checkout master git commit -m “commit A”
+
+git checkout -b branch1 git commit -m “commit B”
+
+git checkout master git commit -m “commit C”
+
+git merge branch1 git commit -m “commit D”
+
+## Branch1
+
+Petite modification sur la nouvelle branche créée branch1
