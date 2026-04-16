@@ -5,3 +5,5 @@ netflix <- read.csv("data/netflix_user_behavior_dataset.csv")
 
 netflix <- netflix[1:100, ]
 usethis::use_data(netflix, overwrite = TRUE)
+
+
