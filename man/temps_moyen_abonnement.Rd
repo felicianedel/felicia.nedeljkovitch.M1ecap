@@ -2,7 +2,7 @@
 % Please edit documentation in R/fonctions.R
 \name{temps_moyen_abonnement}
 \alias{temps_moyen_abonnement}
-\title{Calculer le temps de visionnage moyen par abonnement}
+\title{Calculer le temps moyen de visionnage par abonnement}
 \usage{
 temps_moyen_abonnement(data)
 }
@@ -10,8 +10,8 @@ temps_moyen_abonnement(data)
 \item{data}{Un data frame.}
 }
 \value{
-Un data frame avec la moyenne par groupe.
+Un data frame.
 }
 \description{
-Calcule la moyenne du temps de visionnage par type d'abonnement.
+Calculer le temps moyen de visionnage par abonnement
 }

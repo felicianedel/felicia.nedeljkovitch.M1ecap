@@ -2,7 +2,7 @@
 % Please edit documentation in R/fonctions.R
 \name{temps_moyen_abonnement_graph}
 \alias{temps_moyen_abonnement_graph}
-\title{Faire un graphique du temps de visionnage moyen par abonnement}
+\title{Représenter le temps moyen de visionnage par abonnement}
 \usage{
 temps_moyen_abonnement_graph(data)
 }
@@ -13,6 +13,5 @@ temps_moyen_abonnement_graph(data)
 Un graphique ggplot2.
 }
 \description{
-Crée un graphique ggplot2 à partir du calcul groupé du temps
-de visionnage moyen par type d'abonnement.
+Représenter le temps moyen de visionnage par abonnement
 }

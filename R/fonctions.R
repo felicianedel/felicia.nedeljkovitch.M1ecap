@@ -1,3 +1,6 @@
+#' @importFrom rlang .data
+NULL
+
 #' Filtrer les données Netflix par genre
 #'
 #' Filtre le jeu de données selon le genre.
@@ -12,45 +15,42 @@ filtre_genre <- function(data, gender) {
 }
 
 
-#' Calculer le temps de visionnage moyen par abonnement
-#'
-#' Calcule la moyenne du temps de visionnage par type d'abonnement.
+#' Calculer le temps moyen de visionnage par abonnement
 #'
 #' @param data Un data frame.
 #'
-#' @return Un data frame avec la moyenne par groupe.
+#' @return Un data frame.
 #' @export
-temps_moyen_abonnement<- function(data) {
-  aggregate(avg_watch_time_minutes ~ subscription_type,
-            data = data,
-            FUN = mean)
+temps_moyen_abonnement <- function(data) {
+  stats::aggregate(
+    avg_watch_time_minutes ~ subscription_type,
+    data = data,
+    FUN = mean
+  )
 }
-
-
-#' Faire un graphique du temps de visionnage moyen par abonnement
-#'
-#' Crée un graphique ggplot2 à partir du calcul groupé du temps
-#' de visionnage moyen par type d'abonnement.
+#' Représenter le temps moyen de visionnage par abonnement
 #'
 #' @param data Un data frame.
 #'
 #' @return Un graphique ggplot2.
 #' @export
-temps_moyen_abonnement_graph<- function(data) {
+temps_moyen_abonnement_graph <- function(data) {
   df_summary <- temps_moyen_abonnement(data)
 
   ggplot2::ggplot(
     df_summary,
-    ggplot2::aes(x = subscription_type, y = avg_watch_time_minutes)
+    ggplot2::aes(
+      x = .data$subscription_type,
+      y = .data$avg_watch_time_minutes
+    )
   ) +
     ggplot2::geom_col() +
     ggplot2::labs(
-      title = "Temps de visionnage moyen par abonnement",
+      title = "Temps moyen de visionnage par abonnement",
       x = "Type d'abonnement",
       y = "Temps moyen (minutes)"
     )
 }
-
 #' Calculer un temps de visionnage moyen après filtrage
 #'
 #' Filtre les données selon un pays et un âge minimal, puis calcule
